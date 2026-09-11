@@ -1336,17 +1336,17 @@
         <div class="why-card">
           <div class="why-icon">⚡</div>
           <h3>Hemat Waktu</h3>
-          <p>Tidak perlu bingung berlama-lama memikirkan menu makan setiap hari.</p>
+          <p>Tidak perlu mencari dan membandingkan informasi makanan secara manual.</p>
         </div>
         <div class="why-card">
           <div class="why-icon">📊</div>
-          <h3>Keputusan Rasional</h3>
-          <p>Memahami konsekuensi gizi dan biaya dari setiap makanan yang kamu pilih.</p>
+          <h3>Keputusan Lebih Jelas</h3>
+          <p>Memahami kelebihan dan konsekuensi dari setiap pilihan makanan.</p>
         </div>
         <div class="why-card">
           <div class="why-icon">😌</div>
-          <h3>Bebas Rasa Bersalah</h3>
-          <p>Mengurangi penyesalan setelah membeli makanan yang kurang sesuai.</p>
+          <h3>Tetap di Tanganmu</h3>
+          <p>Pilih.in membantu memahami pilihan, keputusan akhir tetap di kamu.</p>
         </div>
       </div>
     </div>
@@ -1394,10 +1394,11 @@
           <div class="form-group">
             <label class="form-label">4. Apa saja yang biasanya kamu pertimbangkan saat memilih makanan? (Bisa pilih lebih dari satu)</label>
             <div class="checkbox-group">
-              <label class="option-item"><input type="checkbox" name="considerations" value="Nutrisi / Kalori"> Nutrisi / Kalori</label>
+              <label class="option-item"><input type="checkbox" name="considerations" value="Nutrisi / Kalori"> Diet / Kesehatan</label>
               <label class="option-item"><input type="checkbox" name="considerations" value="Harga / Budget"> Harga / Budget</label>
-              <label class="option-item"><input type="checkbox" name="considerations" value="Rasa / Selera"> Rasa / Selera</label>
-              <label class="option-item"><input type="checkbox" name="considerations" value="Kemudahan / Praktis"> Kemudahan / Praktis</label>
+              <label class="option-item"><input type="checkbox" name="considerations" value="Rasa / Selera"> Rasa / Preferensi</label>
+              <label class="option-item"><input type="checkbox" name="considerations" value="Rasa / Selera"> Kondisi / Situasi</label>
+              <label class="option-item"><input type="checkbox" name="considerations" value="Kemudahan / Praktis"> Ketersediaan Makanan</label>
               <label class="option-item">
                 <input type="checkbox" onchange="toggleInput(this, 'considerationsOtherWrap')"> Lainnya...
               </label>
@@ -1409,11 +1410,15 @@
 
           <!-- Q5 -->
           <div class="form-group">
-            <label class="form-label">5. Dalam situasi apa kamu paling sering bingung menentukan makanan? (Bisa pilih lebih dari satu)</label>
+            <label class="form-label">5. Dalam situasi apa kamu paling sering bingung memilih makanan? (Bisa pilih lebih dari satu)</label>
             <div class="checkbox-group">
-              <label class="option-item"><input type="checkbox" name="situations" value="Saat sibuk kerja / kuliah"> Saat sibuk kerja / kuliah</label>
-              <label class="option-item"><input type="checkbox" name="situations" value="Saat makan bersama teman / keluarga"> Saat makan bersama teman / keluarga</label>
-              <label class="option-item"><input type="checkbox" name="situations" value="Saat sedang menjalani diet tertentu"> Saat sedang menjalani diet tertentu</label>
+              <label class="option-item"><input type="checkbox" name="situations" value="Saat sibuk kerja / kuliah"> Saat makan di luar</label>
+              <label class="option-item"><input type="checkbox" name="situations" value="Saat makan bersama teman / keluarga"> Saat sedang sibuk</label>
+              <label class="option-item"><input type="checkbox" name="situations" value="Saat sedang menjalani diet tertentu"> Saat budget terbatas</label>
+              <label class="option-item"><input type="checkbox" name="situations" value="Saat sedang menjalani diet tertentu"> Saat banyak pilihan makanan</label>
+              <label class="option-item"><input type="checkbox" name="situations" value="Saat sedang menjalani diet tertentu"> Saat mengikuti acara / catering</label>
+
+
               <label class="option-item">
                 <input type="checkbox" onchange="toggleInput(this, 'situationsOtherWrap')"> Lainnya...
               </label>
@@ -1425,10 +1430,13 @@
 
           <!-- Q6 -->
           <div class="form-group">
-            <label class="form-label">6. Saat memilih makanan, apakah kamu biasanya mencari dan membandingkan informasi terlebih dahulu? <span class="req">*</span></label>
-            <div class="radio-group">
-              <label class="option-item"><input type="radio" name="compare_info" value="Ya" required> Ya</label>
-              <label class="option-item"><input type="radio" name="compare_info" value="Tidak"> Tidak</label>
+            <label class="form-label">6. aat memilih makanan, apakah kamu biasanya mencari dan membandingkan informasi terlebih dahulu? <span class="req">*</span></label>
+             <div class="radio-group">
+              <label class="option-item"><input type="radio" name="helpfulness" value="Sangat Membantu" required> Selalu</label>
+              <label class="option-item"><input type="radio" name="helpfulness" value="Membantu"> Sering</label>
+              <label class="option-item"><input type="radio" name="helpfulness" value="Cukup Membantu"> Kadang-Kadang</label>
+              <label class="option-item"><input type="radio" name="helpfulness" value="Kurang Membantu"> Jarang</label>
+              <label class="option-item"><input type="radio" name="helpfulness" value="Kurang Membantu"> Tidak pernah</label>
             </div>
           </div>
 
@@ -1439,7 +1447,8 @@
               <label class="option-item"><input type="radio" name="helpfulness" value="Sangat Membantu" required> Sangat Membantu</label>
               <label class="option-item"><input type="radio" name="helpfulness" value="Membantu"> Membantu</label>
               <label class="option-item"><input type="radio" name="helpfulness" value="Cukup Membantu"> Cukup Membantu</label>
-              <label class="option-item"><input type="radio" name="helpfulness" value="Kurang Membantu"> Kurang Membantu</label>
+              <label class="option-item"><input type="radio" name="helpfulness" value="Cukup Membantu"> Kurang Membantu</label>
+              <label class="option-item"><input type="radio" name="helpfulness" value="Kurang Membantu"> Tidak Membantu</label>
             </div>
           </div>
 
